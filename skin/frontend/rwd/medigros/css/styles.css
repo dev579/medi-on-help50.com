@@ -14890,7 +14890,7 @@ a.phone:after {
     /* padding: 0; */
     clear: both;
     left: 0;
-    background-color: #fff;
+    /*background-color: #fff;*/
     z-index: 9;
 }
 
