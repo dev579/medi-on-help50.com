@@ -1,0 +1,85 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+<div class="top-row">
+    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('top-info')->toHtml() ?>
+    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('phone-box')->toHtml() ?>
+</div>
+<header id="header" class="page-header">
+    <div class="info-list">
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('info-list')->toHtml() ?>
+    </div>
+    <div class="navigation-row">
+        <div class="category-nav-scroll fixed">
+            <div class="category-nav-scroll-wrap">
+                    <a class="logo" href="<?php echo $this->getBaseUrl(); ?>" style="display: block !important;"">
+                       <!-- <img class="small" src="<?php echo $this->getSkinUrl('images/logo-small.png') ?>" width="184" height="40" alt=""/> -->
+                    <img class="small" src="<?php echo $this->getSkinUrl('images/medigros-logo-200.png') ?>" width="190" height="54" alt="" style="display: block !important; background-color: #fff;"/>
+                    </a>
+                <div class="second-menu-wrap">
+
+                    <div class="second-menu-wrap-outer">
+                        <div class="inner-row">
+                            <div class="second-menu-wrap-inner">
+
+
+                                <?php echo $this->getChildHtml('topMenu') ?>
+                                
+                                <!--viewed when header is sticky-->
+                                <a href="#" class="mob-menu-opener">
+                                    <?php echo $this->__('mob menu'); ?>
+                                </a>
+
+
+                            </div>  <!-- end: <div class="second-menu-wrap-inner"> -->
+
+                        </div>  <!-- end: <div class=".row"> -->
+
+                                <!-- Search -->
+                        <div id="header-search" class="skip-content">
+                            <?php echo $this->getChildHtml('topSearch') ?>
+                        </div>
+
+                    </div>  <!-- end: <div class="second-menu-wrap-outer"> -->
+                </div> <!-- end: <div class="second-menu-wrap"> -->
+
+
+                <div class="header-minicart">
+                   <?php echo $this->getChildHtml('minicart_head'); ?>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <?php /* Don't show this header on the homepage */ ?>
+    <?php echo $this->getChildHtml('headerUsp'); ?>
+
+</header>
+
+<?php echo $this->getChildHtml('topContainer'); ?>
