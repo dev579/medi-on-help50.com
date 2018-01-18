@@ -31,7 +31,6 @@
  * @see Mage_Page_Block_Html_Topmenu
  */
 ?>
-
 <?php $_helper = Mage::helper('catalog/category') ?>
 <?php $_categories = $_helper->getStoreCategories() ?>
 <?php $layer = Mage::getModel("catalog/layer"); ?>
@@ -45,10 +44,9 @@
 
 <div class="category-nav">
     <strong class="category-ttl">
-       <?php /* <a class="mini-logo" href="#">
-            <img src="<?php echo $this->getSkinUrl('images/mini-logo.png') ?>" alt="" width="61"
-                 height="55"/>
-        </a> */ ?>
+        <a class="mini-logo" href="#">
+            <img src="<?php echo $this->getSkinUrl('images/medigros-logo.svg') ?>" alt="" width="150"/>
+        </a>
         <span class="tb">
             <span class="tc">
                 <span><?php echo $this->__('Bekijk alle <strong>categorieen</strong>'); ?></span>
@@ -57,7 +55,7 @@
     </strong>
     <div id="header-nav" class="skip-content">
         <nav id="nav">
-            <ol class="nav-primary t555">
+            <ol class="nav-primary">
                 <li class="level0 nav-1 first parent">
                     <a href="/" class="level0 " title="Homepage"><span>Home</span></a>
                 </li>

@@ -38,9 +38,8 @@
     <div class="navigation-row">
         <div class="category-nav-scroll fixed">
             <div class="category-nav-scroll-wrap">
-                    <a class="logo" href="<?php echo $this->getBaseUrl(); ?>" style="display: block !important;"">
-                       <!-- <img class="small" src="<?php echo $this->getSkinUrl('images/logo-small.png') ?>" width="184" height="40" alt=""/> -->
-                    <img class="small" src="<?php echo $this->getSkinUrl('images/medigros-logo.svg') ?>" width="190" height="54" alt="" style="display: block !important; /* background-color: #fff; */ "/>
+                   <a class="logo" href="<?php echo $this->getBaseUrl(); ?>" style="" ">
+                    <img src="<?php echo $this->getSkinUrl('images/medigros-logo.svg') ?>" alt="" width="150"/>
                     </a>
                 <div class="second-menu-wrap">
 
@@ -56,10 +55,17 @@
                                     <?php echo $this->__('mob menu'); ?>
                                 </a>
 
+                                <div id="hamburger-menu" class=""><div id="mob-menu-inner-row"><span class="m-opener"></span><span class="m-opener"></span><span class="m-opener"></span></div></div>
+
 
                             </div>  <!-- end: <div class="second-menu-wrap-inner"> -->
 
                         </div>  <!-- end: <div class=".row"> -->
+
+
+
+<div class="mobile-menu-wrap"></div>
+
 
                                 <!-- Search -->
                         <div id="header-search" class="skip-content">
